@@ -1,0 +1,55 @@
+should use getActivity() to launch activities from fragments
+
+___________________________________________________________________________________
+#From a Fragment:
+-----------------------------------------------------------------------------------
+
+Intent intent = new Intent(getActivity(), nextActivityClass.class);
+startActivity(intent);
+
+___________________________________________________________________________________
+#From an Activity
+-----------------------------------------------------------------------------------
+
+Intent intent = new Intent(this, nextActivityClass.class);
+startActivity(intent);
+___________________________________________________________________________________
+
+
+
+
+
+
+*****************************************************************************************
+https://developer.android.com/reference/android/content/Intent.html
+*****************************************************************************************
+Public constructors
+Intent()
+Create an empty intent.
+
+Intent(Intent o)
+Copy constructor.
+
+Intent(String action)
+Create an intent with a given action.
+
+Intent(String action, Uri uri)
+Create an intent with a given action and for a given data url.
+
+Intent(Context packageContext, Class<?> cls)
+Create an intent for a specific component.
+
+Intent(String action, Uri uri, Context packageContext, Class<?> cls)
+Create an intent for a specific component with a specified action and data.
+*****************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
