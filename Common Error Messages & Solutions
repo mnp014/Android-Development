@@ -1,0 +1,30 @@
+ERROR 1>>
+------------------------------------------------------------------------------------------------------------------
+Error:Failed to open zip file.
+Gradle's dependency cache may be corrupt (this sometimes occurs after a network connection timeout.)
+<a href="syncProject">Re-download dependencies and sync project (requires network)</a>
+<a href="syncProject">Re-download dependencies and sync project (requires network)</a>
+------------------------------------------------------------------------------------------------------------------
+SOL>>
+------------------------------------------------------------------------------------------------------------------
+Step1:
+
+      goto->> Gradle Scripts>build.gradle and check for 
+          dependencies {
+          classpath 'com.android.tools.build:gradle:3.0.1'    //update gradle value (ex: 3.0.1 to  x.x.x)
+Step2:        
+      goto->> Gradle Scripts>gradle-wrapper.properties(Gradle version) and check for
+      distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip     //update gradle value (ex: 4.1 to  x.x)
+Step3:      
+      Goto message box>
+      Click on Re-Download dependencies and sync project(network Required)
+Step4:
+      "ReBuild Project" or "Make Project" in Build Menu.
+Step5:
+      Run the App.
+      
+      
+      ___________________________________________________________________________________________________________
+      ***********************************************************************************************************
+      ___________________________________________________________________________________________________________
+    ERROR 2>>  
