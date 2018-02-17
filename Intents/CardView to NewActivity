@@ -1,0 +1,38 @@
+CardView attributes
+------------------------------------------------------------------------------------------------------
+android:clickable="true"
+android:foreground="?android:attr/selectableItemBackground"
+______________________________________________________________________________________________________
+
+In Your Adapter java file and inside of "ViewHolder" you will find :
+------------------------------------------------------------------------------------------------------
+public ContactViewHolder(final View v) {
+        super(v);
+
+    }
+______________________________________________________________________________________________________
+
+Write Blow Code:
+------------------------------------------------------------------------------------------------------
+v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                v.getContext().startActivity(new Intent(v.getContext(),your_activity_to_start.class));
+            }
+        })
+______________________________________________________________________________________________________        
+
+You can use viewHolder class as follow
+------------------------------------------------------------------------------------------------------
+public ViewHolder(View itemLayoutView) {
+        super(itemLayoutView);
+
+       itemLayoutView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+             //  perform your action here
+            }
+        });
+    }
+______________________________________________________________________________________________________      
