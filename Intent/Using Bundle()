@@ -1,0 +1,30 @@
+Their are two methods you can use to pass an integer. One is as shown below.
+__________________________________________________________________________________________________________
+A.class
+-----------------------------------------------------------------------------------------------------------
+Intent myIntent = new Intent(A.this, B.class);
+myIntent.putExtra("intVariableName", intValue);
+startActivity(myIntent);
+-----------------------------------------------------------------------------------------------------------
+B.class
+-----------------------------------------------------------------------------------------------------------
+Intent intent = getIntent();
+int intValue = intent.getIntExtra("intVariableName", 0);
+__________________________________________________________________________________________________________
+The other method converts the integer to a string and uses the following code.
+__________________________________________________________________________________________________________
+A.class
+-----------------------------------------------------------------------------------------------------------
+Intent intent = new Intent(A.this, B.class);
+Bundle extras = new Bundle();
+extras.putString("StringVariableName", intValue + "");
+intent.putExtras(extras);
+startActivity(intent);
+The code above will pass your integer value as a string to class B. On class B, get the string value and convert again as an integer as shown below.
+-----------------------------------------------------------------------------------------------------------
+B.class
+-----------------------------------------------------------------------------------------------------------
+   Bundle extras = getIntent().getExtras();
+   String stringVariableName = extras.getString("StringVariableName");
+   int intVariableName = Integer.parseInt(stringVariableName);
+__________________________________________________________________________________________________________
